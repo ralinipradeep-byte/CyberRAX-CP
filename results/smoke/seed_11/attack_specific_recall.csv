@@ -1,0 +1,9 @@
+seed,attack_type,n_attack_windows,recall
+11,command_injection,112,0.98214286
+11,denial_of_service,106,1.00000000
+11,device_spoofing,68,0.80882353
+11,false_data_injection,102,1.00000000
+11,man_in_the_middle,86,1.00000000
+11,replay,135,0.95555556
+11,scanning,75,1.00000000
+11,normal_false_positive_rate,340,0.37058824

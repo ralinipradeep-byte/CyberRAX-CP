@@ -1,0 +1,7 @@
+,f1,f1,roc_auc,roc_auc,ece,ece,brier,brier,fpr,fpr,false_alarms_per_simulated_hour,false_alarms_per_simulated_hour
+,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std
+model,,,,,,,,,,,,
+CyberRAX-CP,0.90020367,,0.96480048,,0.25890738,,0.17996026,,0.37058824,,442.96875000,
+Domain-aware XGBoost,0.94677871,,0.98668086,,0.04332558,,0.04001164,,0.20000000,,239.06250000,
+Fixed-weight fusion,0.94647887,,0.98301944,,0.19893285,,0.09162204,,0.18823529,,225.00000000,
+Temporal branch only,0.74355495,,0.53714955,,0.07024189,,0.22517530,,0.71176471,,850.78125000,

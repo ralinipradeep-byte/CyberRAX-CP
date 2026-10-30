@@ -1,0 +1,7 @@
+This directory contains a one-seed, reduced-data, reduced-tree, one-epoch software smoke test. It verifies that the main training, calibration, fusion, metric, plotting, and robustness code paths execute. It is NOT the full ten-seed experiment and must NOT be used as manuscript results.
+
+For publication-oriented execution, run:
+  python src/train.py --mode full --data-dir data/processed --out results/full
+  python src/robustness.py --data-dir data/processed --results-dir results/full
+  python src/explanation_stability.py --results-dir results/full
+  python src/make_figures.py --data data/raw/gpotsim_reconstructed.csv --results results/full --out figures/full

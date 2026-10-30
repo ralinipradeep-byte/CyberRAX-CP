@@ -1,0 +1,159 @@
+{
+  "project": "CyberRAX-CP",
+  "mode": "smoke",
+  "seeds": [
+    11
+  ],
+  "runtime_seconds": 4.14,
+  "python": "3.13.5",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "torch": "2.10.0+cpu",
+  "numpy": "2.3.5",
+  "rows_in_metrics": 6,
+  "provenance": "Reconstructed dataset; see top-level README.",
+  "runs": [
+    {
+      "seed": 11,
+      "mode": "smoke",
+      "train_windows": 2048,
+      "validation_windows": 1024,
+      "test_windows": 1024,
+      "gru": {
+        "best_epoch": 1,
+        "best_validation_f1": 0.47568523430592397
+      },
+      "device_selected": "cpu",
+      "branch_reliability_temporal": {
+        "ece_validation": 0.0008460958874838898,
+        "reliability": 1180.5039013591222,
+        "epsilon": 1e-06
+      },
+      "branch_reliability_domain": {
+        "ece_validation": 0.021269379694690716,
+        "reliability": 47.013735267246275,
+        "epsilon": 1e-06
+      },
+      "platt_temporal": {
+        "fitted": true,
+        "coef": [
+          -0.6671238537095171
+        ],
+        "intercept": [
+          0.9260796201364943
+        ]
+      },
+      "platt_domain": {
+        "fitted": true,
+        "coef": [
+          3.267705695244834
+        ],
+        "intercept": [
+          -0.9080807379066512
+        ]
+      },
+      "thresholds_validation_only": {
+        "CyberRAX-CP": 0.7062165787316971,
+        "Fixed-weight fusion": 0.5099999999999999,
+        "GRU-Attention": 0.39566829800605774,
+        "XGBoost": 0.490986704826355,
+        "Temporal branch only": 0.6827007273285114,
+        "Domain-aware XGBoost": 0.24999999999999994
+      },
+      "test_labels_used_for_threshold_selection": false,
+      "svm_subsampled_training": false,
+      "transformer_baseline_skipped": false,
+      "optional_baselines_skipped": false,
+      "experiment_config": {
+        "project": "CyberRAX-CP",
+        "simulator": {
+          "seed": 20260814,
+          "observations": 24000,
+          "sampling_interval_seconds": 1,
+          "train_end": 14400,
+          "validation_end": 19200,
+          "window_length": 30,
+          "stride": 1,
+          "target_attack_share_by_split": {
+            "train": 0.415,
+            "validation": 0.398,
+            "test": 0.407
+          }
+        },
+        "experiment": {
+          "seeds": [
+            11,
+            23,
+            37,
+            41,
+            53,
+            67,
+            71,
+            83,
+            97,
+            109
+          ],
+          "threshold_metric": "f1",
+          "ece_bins": 15,
+          "epsilon": 1e-06,
+          "save_predictions": true,
+          "save_checkpoints": true
+        },
+        "models": {
+          "xgboost": {
+            "n_estimators": 400,
+            "max_depth": 5,
+            "learning_rate": 0.05,
+            "subsample": 0.8,
+            "colsample_bytree": 0.9,
+            "early_stopping_rounds": 30
+          },
+          "random_forest": {
+            "n_estimators": 300,
+            "max_depth": 12,
+            "min_samples_leaf": 2
+          },
+          "svm": {
+            "C": 10,
+            "gamma": "scale"
+          },
+          "temporal": {
+            "input_size": 15,
+            "hidden_size": 64,
+            "num_layers": 2,
+            "dropout": 0.2,
+            "batch_size": 64,
+            "learning_rate": 0.001,
+            "max_epochs": 40,
+            "patience": 12
+          },
+          "transformer": {
+            "d_model": 64,
+            "nhead": 4,
+            "num_layers": 2,
+            "dropout": 0.2,
+            "batch_size": 64,
+            "learning_rate": 0.0005,
+            "max_epochs": 40,
+            "patience": 12
+          }
+        },
+        "smoke": {
+          "seeds": [
+            11
+          ],
+          "max_epochs": 1,
+          "xgb_estimators": 20,
+          "rf_estimators": 20
+        }
+      },
+      "inference_timing_seconds": {
+        "gru_attention_test_total": 0.09963974999982383,
+        "gru_attention_ms_per_window": 0.09730444335920296,
+        "xgboost_test_total": 0.0007014870000148221,
+        "xgboost_ms_per_window": 0.0006850458984519747,
+        "fusion_test_total": 7.397900003525137e-05,
+        "fusion_ms_per_window": 7.224511722192517e-05
+      }
+    }
+  ]
+}

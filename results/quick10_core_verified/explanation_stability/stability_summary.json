@@ -1,0 +1,7 @@
+{
+  "top5_jaccard_mean": 0.68994708994709,
+  "top5_jaccard_sd": 0.20345962151319802,
+  "rank_correlation_mean": 0.7097227296715789,
+  "rank_correlation_sd": 0.06053882229710299,
+  "pair_count": 45
+}

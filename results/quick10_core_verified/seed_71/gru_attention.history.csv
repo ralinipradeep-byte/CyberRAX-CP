@@ -1,0 +1,2 @@
+epoch,train_loss,validation_f1_at_0_5,checkpoint_threshold
+1,0.6278687694253391,0.5144315101259768,0.5

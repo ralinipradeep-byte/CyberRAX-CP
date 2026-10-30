@@ -1,0 +1,90 @@
+{
+  "experiment": "10-seed QUICK CORE VALIDATION; not full manuscript protocol",
+  "dataset": "deterministic reconstructed GP-OTSim-style telemetry",
+  "seeds": [
+    11,
+    23,
+    37,
+    41,
+    53,
+    67,
+    71,
+    83,
+    97,
+    109
+  ],
+  "training": "one epoch GRU; 30 estimators XGBoost; skips SVM/RF/Transformer/generic ablation",
+  "manuscript_reproduction_certified": false,
+  "runs": [
+    {
+      "seed": 11,
+      "mode": "quick",
+      "optional_baselines_skipped": true,
+      "gru_epochs_max": 1,
+      "svm": "not evaluated"
+    },
+    {
+      "seed": 23,
+      "mode": "quick",
+      "optional_baselines_skipped": true,
+      "gru_epochs_max": 1,
+      "svm": "not evaluated"
+    },
+    {
+      "seed": 37,
+      "mode": "quick",
+      "optional_baselines_skipped": true,
+      "gru_epochs_max": 1,
+      "svm": "not evaluated"
+    },
+    {
+      "seed": 41,
+      "mode": "quick",
+      "optional_baselines_skipped": true,
+      "gru_epochs_max": 1,
+      "svm": "not evaluated"
+    },
+    {
+      "seed": 53,
+      "mode": "quick",
+      "optional_baselines_skipped": true,
+      "gru_epochs_max": 1,
+      "svm": "not evaluated"
+    },
+    {
+      "seed": 67,
+      "mode": "quick",
+      "optional_baselines_skipped": true,
+      "gru_epochs_max": 1,
+      "svm": "not evaluated"
+    },
+    {
+      "seed": 71,
+      "mode": "quick",
+      "optional_baselines_skipped": true,
+      "gru_epochs_max": 1,
+      "svm": "not evaluated"
+    },
+    {
+      "seed": 83,
+      "mode": "quick",
+      "optional_baselines_skipped": true,
+      "gru_epochs_max": 1,
+      "svm": "not evaluated"
+    },
+    {
+      "seed": 97,
+      "mode": "quick",
+      "optional_baselines_skipped": true,
+      "gru_epochs_max": 1,
+      "svm": "not evaluated"
+    },
+    {
+      "seed": 109,
+      "mode": "quick",
+      "optional_baselines_skipped": true,
+      "gru_epochs_max": 1,
+      "svm": "not evaluated"
+    }
+  ]
+}

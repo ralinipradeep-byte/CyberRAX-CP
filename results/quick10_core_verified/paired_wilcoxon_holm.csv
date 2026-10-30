@@ -1,0 +1,16 @@
+comparison,metric,n_pairs,statistic,p_value,p_holm
+CyberRAX-CP vs Domain-aware XGBoost,f1,10,16.00000000,0.84375000,1.00000000
+CyberRAX-CP vs Fixed-weight fusion,f1,10,14.00000000,0.19335938,0.58007812
+CyberRAX-CP vs GRU-Attention,f1,10,6.00000000,0.02734375,0.10937500
+CyberRAX-CP vs Temporal branch only,f1,10,0.00000000,0.00195312,0.00976562
+CyberRAX-CP vs XGBoost,f1,10,17.00000000,0.94531250,1.00000000
+CyberRAX-CP vs Domain-aware XGBoost,ece,10,0.00000000,0.00195312,0.00976562
+CyberRAX-CP vs Fixed-weight fusion,ece,10,0.00000000,0.00195312,0.00976562
+CyberRAX-CP vs GRU-Attention,ece,10,0.00000000,0.00195312,0.00976562
+CyberRAX-CP vs Temporal branch only,ece,10,0.00000000,0.00195312,0.00976562
+CyberRAX-CP vs XGBoost,ece,10,3.00000000,0.00976562,0.00976562
+CyberRAX-CP vs Domain-aware XGBoost,brier,10,0.00000000,0.00195312,0.00976562
+CyberRAX-CP vs Fixed-weight fusion,brier,10,0.00000000,0.00195312,0.00976562
+CyberRAX-CP vs GRU-Attention,brier,10,0.00000000,0.00195312,0.00976562
+CyberRAX-CP vs Temporal branch only,brier,10,0.00000000,0.00195312,0.00976562
+CyberRAX-CP vs XGBoost,brier,10,20.00000000,0.49218750,0.49218750

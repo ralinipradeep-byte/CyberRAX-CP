@@ -1,0 +1,145 @@
+{
+  "seed": 23,
+  "mode": "quick",
+  "train_windows": 14371,
+  "validation_windows": 4771,
+  "test_windows": 4771,
+  "gru": {
+    "best_epoch": 1,
+    "best_validation_f1": 0.48782878614605457
+  },
+  "branch_reliability_temporal": {
+    "ece_validation": 0.08160257316943283,
+    "reliability": 12.254365356327083,
+    "epsilon": 1e-06
+  },
+  "branch_reliability_domain": {
+    "ece_validation": 0.010173525653196009,
+    "reliability": 98.28468019891241,
+    "epsilon": 1e-06
+  },
+  "platt_temporal": {
+    "fitted": true,
+    "coef": [
+      -0.8982221190421835
+    ],
+    "intercept": [
+      0.6627984752031901
+    ]
+  },
+  "platt_domain": {
+    "fitted": true,
+    "coef": [
+      4.016340424876795
+    ],
+    "intercept": [
+      -0.3501379631404639
+    ]
+  },
+  "thresholds_validation_only": {
+    "CyberRAX-CP": 0.32999999999999996,
+    "Fixed-weight fusion": 0.4799999999999999,
+    "GRU-Attention": 0.18908260762691498,
+    "XGBoost": 0.4799999999999999,
+    "Temporal branch only": 0.31588665556005985,
+    "Domain-aware XGBoost": 0.33999999999999997
+  },
+  "test_labels_used_for_threshold_selection": false,
+  "svm_subsampled_training": true,
+  "transformer_baseline_skipped": true,
+  "optional_baselines_skipped": true,
+  "experiment_config": {
+    "project": "CyberRAX-CP",
+    "simulator": {
+      "seed": 20260814,
+      "observations": 24000,
+      "sampling_interval_seconds": 1,
+      "train_end": 14400,
+      "validation_end": 19200,
+      "window_length": 30,
+      "stride": 1,
+      "target_attack_share_by_split": {
+        "train": 0.415,
+        "validation": 0.398,
+        "test": 0.407
+      }
+    },
+    "experiment": {
+      "seeds": [
+        11,
+        23,
+        37,
+        41,
+        53,
+        67,
+        71,
+        83,
+        97,
+        109
+      ],
+      "threshold_metric": "f1",
+      "ece_bins": 15,
+      "epsilon": 1e-06,
+      "save_predictions": true,
+      "save_checkpoints": true
+    },
+    "models": {
+      "xgboost": {
+        "n_estimators": 30,
+        "max_depth": 5,
+        "learning_rate": 0.05,
+        "subsample": 0.8,
+        "colsample_bytree": 0.9,
+        "early_stopping_rounds": 30
+      },
+      "random_forest": {
+        "n_estimators": 25,
+        "max_depth": 12,
+        "min_samples_leaf": 2
+      },
+      "svm": {
+        "C": 10,
+        "gamma": "scale",
+        "max_train_samples": 250
+      },
+      "temporal": {
+        "input_size": 15,
+        "hidden_size": 64,
+        "num_layers": 2,
+        "dropout": 0.2,
+        "batch_size": 512,
+        "learning_rate": 0.001,
+        "max_epochs": 1,
+        "patience": 1
+      },
+      "transformer": {
+        "skip": true,
+        "d_model": 64,
+        "nhead": 4,
+        "num_layers": 2,
+        "dropout": 0.2,
+        "batch_size": 256,
+        "learning_rate": 0.0005,
+        "max_epochs": 2,
+        "patience": 2
+      },
+      "skip_optional_baselines": true
+    },
+    "smoke": {
+      "seeds": [
+        11
+      ],
+      "max_epochs": 1,
+      "xgb_estimators": 20,
+      "rf_estimators": 20
+    }
+  },
+  "inference_timing_seconds": {
+    "gru_attention_test_total": 0.5781135430001996,
+    "gru_attention_ms_per_window": 0.12117240473699425,
+    "xgboost_test_total": 0.0034812549999969633,
+    "xgboost_ms_per_window": 0.0007296698805275547,
+    "fusion_test_total": 0.00016009699993446702,
+    "fusion_ms_per_window": 3.355627749622029e-05
+  }
+}
