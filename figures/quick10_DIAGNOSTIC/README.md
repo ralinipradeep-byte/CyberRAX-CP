@@ -1,0 +1,1 @@
+All 15 figures here are generated from the deterministic reconstructed telemetry and EXECUTED QUICK-CORE diagnostics, not the original manuscript raw dataset or full training protocol. Figures are accurate for the included quick run only. They must not be inserted into the submitted manuscript as evidence for claimed F1 0.9709 or AUC 0.9989.
