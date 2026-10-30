@@ -1,0 +1,95 @@
+{
+  "dataset_name": "GP-OTSim-style deterministic reconstruction",
+  "provenance": "Generated from manuscript method description; not the unavailable original raw dataset.",
+  "generator_seed": 20260814,
+  "observations": 24000,
+  "sampling_interval_seconds": 1,
+  "split_ranges_zero_based_inclusive_exclusive": {
+    "train": [
+      0,
+      14400
+    ],
+    "validation": [
+      14400,
+      19200
+    ],
+    "test": [
+      19200,
+      24000
+    ]
+  },
+  "mode_counts": {
+    "normal": 8000,
+    "high_load": 8000,
+    "maintenance": 8000
+  },
+  "label_counts": {
+    "0": 14160,
+    "1": 9840
+  },
+  "attack_type_counts": {
+    "normal": 14160,
+    "command_injection": 1515,
+    "man_in_the_middle": 1504,
+    "denial_of_service": 1420,
+    "false_data_injection": 1388,
+    "replay": 1371,
+    "scanning": 1339,
+    "device_spoofing": 1303
+  },
+  "attack_types": [
+    "false_data_injection",
+    "replay",
+    "command_injection",
+    "denial_of_service",
+    "scanning",
+    "man_in_the_middle",
+    "device_spoofing"
+  ],
+  "process_input_columns": [
+    "pressure_in",
+    "pressure_mid",
+    "pressure_out",
+    "flow_main",
+    "flow_branch",
+    "valve_in",
+    "valve_out",
+    "compressor_state",
+    "temperature",
+    "demand",
+    "pressure_setpoint",
+    "control_command",
+    "modbus_function_code",
+    "device_id",
+    "communication_delay_ms"
+  ],
+  "network_input_columns": [
+    "packet_rate",
+    "packet_size_bytes",
+    "interarrival_jitter_ms",
+    "retry_count",
+    "tcp_syn_rate",
+    "read_write_ratio",
+    "response_time_ms",
+    "request_count",
+    "response_count",
+    "error_response_rate",
+    "address_diversity",
+    "connection_reset_rate",
+    "modbus_exception_rate",
+    "command_burst_rate",
+    "network_load",
+    "response_missing_rate",
+    "protocol_entropy",
+    "source_ip_count",
+    "destination_port_diversity",
+    "session_duration_s"
+  ],
+  "missing_value_counts": {
+    "pressure_in": 101,
+    "pressure_mid": 101,
+    "pressure_out": 101,
+    "flow_main": 79,
+    "flow_branch": 79
+  }
+}
