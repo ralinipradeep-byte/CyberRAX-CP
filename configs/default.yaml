@@ -1,0 +1,58 @@
+project: CyberRAX-CP
+simulator:
+  seed: 20260814
+  observations: 24000
+  sampling_interval_seconds: 1
+  train_end: 14400
+  validation_end: 19200
+  window_length: 30
+  stride: 1
+  target_attack_share_by_split:
+    train: 0.415
+    validation: 0.398
+    test: 0.407
+experiment:
+  seeds: [11, 23, 37, 41, 53, 67, 71, 83, 97, 109]
+  threshold_metric: f1
+  ece_bins: 15
+  epsilon: 0.000001
+  save_predictions: true
+  save_checkpoints: true
+models:
+  xgboost:
+    n_estimators: 400
+    max_depth: 5
+    learning_rate: 0.05
+    subsample: 0.8
+    colsample_bytree: 0.9
+    early_stopping_rounds: 30
+  random_forest:
+    n_estimators: 300
+    max_depth: 12
+    min_samples_leaf: 2
+  svm:
+    C: 10
+    gamma: scale
+  temporal:
+    input_size: 15
+    hidden_size: 64
+    num_layers: 2
+    dropout: 0.2
+    batch_size: 64
+    learning_rate: 0.001
+    max_epochs: 40
+    patience: 12
+  transformer:
+    d_model: 64
+    nhead: 4
+    num_layers: 2
+    dropout: 0.2
+    batch_size: 64
+    learning_rate: 0.0005
+    max_epochs: 40
+    patience: 12
+smoke:
+  seeds: [11]
+  max_epochs: 1
+  xgb_estimators: 20
+  rf_estimators: 20
