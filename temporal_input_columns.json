@@ -1,0 +1,17 @@
+[
+  "pressure_in",
+  "pressure_mid",
+  "pressure_out",
+  "flow_main",
+  "flow_branch",
+  "valve_in",
+  "valve_out",
+  "compressor_state",
+  "temperature",
+  "demand",
+  "pressure_setpoint",
+  "control_command",
+  "modbus_function_code",
+  "device_id",
+  "communication_delay_ms"
+]

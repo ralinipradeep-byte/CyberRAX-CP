@@ -1,0 +1,50 @@
+{
+  "provenance": "Preprocessed deterministic reconstruction; not the unavailable original raw dataset.",
+  "input_csv": "data/raw/gpotsim_reconstructed.csv",
+  "observations": 24000,
+  "window_length": 30,
+  "chronological_ranges_zero_based_inclusive_exclusive": {
+    "train": [
+      0,
+      14400
+    ],
+    "validation": [
+      14400,
+      19200
+    ],
+    "test": [
+      19200,
+      24000
+    ]
+  },
+  "domain_feature_count": 69,
+  "temporal_input_count": 15,
+  "split_window_counts": {
+    "test": 4771,
+    "train": 14371,
+    "validation": 4771
+  },
+  "shapes": {
+    "raw_windows_shape": [
+      23913,
+      30,
+      15
+    ],
+    "scaled_windows_shape": [
+      23913,
+      30,
+      15
+    ],
+    "domain_features_shape": [
+      23913,
+      69
+    ],
+    "y_shape": [
+      23913
+    ]
+  },
+  "standardization_scope": "fit on training observations only",
+  "physical_residual_fit_scope": "training rows with label normal only",
+  "window_policy": "windows generated independently within each split; no cross-split windows",
+  "storage_dtype": "float64 for audit arrays; training casts to float32"
+}
